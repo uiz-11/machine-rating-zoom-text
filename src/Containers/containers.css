@@ -1,0 +1,36 @@
+a.nav-link {
+  color: #000;
+}
+
+/* Surveys CSS */
+
+div .tlx-scale {
+  width: 100%;
+  margin: 0;
+  padding: 0 1rem;
+  display: flex;
+}
+
+div .tlx-scale * {
+  margin: 0 1rem;
+}
+
+div .elab-row {
+  width: 100%;
+  margin: 0;
+  padding: 0.5rem 1rem;
+  display: flex;
+  font-size: .9rem;
+}
+
+div .elab-row * {
+  margin: 1rem;
+}
+
+.text-ctn {
+  margin: 0.5rem;
+}
+
+.alert {
+  text-align: left;
+}

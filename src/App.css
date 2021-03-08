@@ -1,0 +1,26 @@
+.App {
+  text-align: center;
+  background-color: #ECECEC;
+}
+
+.App-body {
+  background-color: #FFF;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0 1rem;
+}
+
+.cb-col {
+  /* background-color: #DBECF3; */
+  padding: .2rem;
+  margin-left: .5rem;
+}
+
+/* Modal CSS*/
+
+.ReactModal__Content, .ReactModal__Overlay {
+  z-index: 10;
+}
