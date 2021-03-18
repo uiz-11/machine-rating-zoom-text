@@ -18,7 +18,7 @@ class TextRate extends Component {
     } else {
       return (
         <Alert color="warning">
-          The machine rated this answer: <b>Irrelevant</b>
+          The machine rated this answer: <b>Not relevant</b>
           <br></br>
           With <b>{100-conf}</b>% confidence
         </Alert>
