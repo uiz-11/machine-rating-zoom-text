@@ -74,10 +74,11 @@ class App extends Component {
       const sheetResults = spreadsheet.sheetsById[RESULTS_ID];
       const sheetTlx = spreadsheet.sheetsById[TLX_ID];
       const sheetElab = spreadsheet.sheetsById[ELAB_ID];
-      const result = await sheet0.addRow(sheet0row);
-      const result2 = await sheetResults.addRow(resultsrow);
-      const result3 = await sheetTlx.addRow(tlxrow);
-      const result4 = await sheetElab.addRow(elabrow);
+      
+      const result = await sheet0.addRow(sheet0row, {insert: true});
+      const result2 = await sheetResults.addRow(resultsrow, {insert: true});
+      const result3 = await sheetTlx.addRow(tlxrow, {insert: true});
+      const result4 = await sheetElab.addRow(elabrow, {insert: true});
     } catch (e) {
       console.error('Error: ', e);
     }
