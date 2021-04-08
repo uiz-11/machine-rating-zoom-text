@@ -165,7 +165,11 @@ class App extends Component {
   }
 
   render() {
-    const { consentSigned, questionsComplete, surveysComplete } = this.state;
+    const { consentSigned,
+      questionsComplete,
+      elabComplete,
+      tlxComplete,
+      surveysComplete } = this.state;
 
     return (
       <div className="App">
@@ -212,14 +216,23 @@ class App extends Component {
           />
         </Modal>
         <Modal
-          isOpen={questionsComplete && surveysComplete}
+          isOpen={questionsComplete && tlxComplete && elabComplete}
           contentLabel="CompletionCode"
           shouldCloseOnOverlayClick={false}
         >
-          <div>
-          <p>Thank you for participating! Your completion code is:</p>
-          <p><b>{this.state.completeCode}</b></p>
-          </div>
+          { surveysComplete
+            ? (
+              <div>
+              <p>Thank you for participating! Your completion code is:</p>
+              <p><b>{this.state.completeCode}</b></p>
+              </div>
+            )
+            : (
+              <div>
+              <p>Generating completion code. Please wait.</p>
+              </div>
+            )
+          }
         </Modal>
       </div>
     );
